@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "EC2 instance automation for our development environment"
+Metadata: {}
+
+Parameters: {}
+
+Mappings: {}
+
+Conditions: {}
+
+Resources: DevWebVPC:
+  Type: AWS::EC2::VPC
+  Properties:
+    CidrBlock: 10.0.0.0/24
+    EnableDnsSupport: true
+    Tags:
+      - Key: name
+        Value: DevWebVPC
+
+Outputs: {}
